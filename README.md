@@ -47,9 +47,23 @@ Here are some of the checkpoints to guide you through this quest:
 - Continuous deployment will be a plus.
 - You must create a Jenkins job that will deploy your app.
 - You might want to use Docker to run your application, if you choose this way it will be a plus, we like containers ;)
+- All tasks should be done with some IaC Tool (Ansible , Puppet, Bolt, Chef...).
+- We want to change the user and password for the Jenkins, so please use variables when you think
+  its fit. 
+- Will be helpfull if you write a small text explain why you chose that IaC tool.
+- You can use any opensource lib, but you need to explain why you chose that one and references that
+  on docs.
+- Docs Docs Docs. We know that writing docs its not the coolest thing ever, but we need to know how
+  to run your scripts. So documentation will be evaluated in the same way as your code. 
 
 Once you have finished, you must send an email to challenge@stone.com.br with the following information:
+- Repository URL
 - Jenkins URL with user and password (we might want to take a look in your job).
 - Published app URL.
 
-
+Useful Words:
+- Ansible
+- Docker
+- Puppet
+- Makefile
+- CentOS
