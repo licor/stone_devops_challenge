@@ -59,7 +59,7 @@ Here are some of the checkpoints to guide you through this challenge, you **don'
 
 - [ ] Deploy a SonarQube server to run static code analisys.
 - [ ] Report code coverage on SonarQube
-- [ ] Build one of your own opensource application builted in Python, Go, Elixir or C#
+- [ ] Build one of your own opensource application builted in Python, Go, Elixir, C#, Java or Node!
 
 ### When you're done...
 
