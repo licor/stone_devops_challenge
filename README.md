@@ -1,43 +1,25 @@
 # Stone DevOps Challenge
 
+## Presentation
+
 Hello there Stone Candidates!
 
-This is your first step to enter in the wonderful world of financial market.
-
-## First things first
-
-We should be able to build all your infrastructure with small steps, or even with just one command. So automation and code everywhere!
+To better assess you technical skills, we prepared this small challenge as part of our hiring process.
 
 ## The Challenge
 
-We need to know how much you are aligned with us,
-to check that we have prepared a little challenge with some checkpoints that you need to reach.
+Pretend that you are a **Infrastructure Developer at Stone Co.** inside a development team working in a new product for the financial market. The team (including you) has agreed to use **Jenkins as your CI/CD tool**, and Node.js with React as the official tech stack. Your team **needs a staging environment** ready to test their first features, and you are tasked to build one, completely as code, for review of the team. You are expected to place the infrastructure code inside the app's own source code repo (this one).
 
-Here is a list of what you will need to complete the challenge:
-
-- A computer with internet
-- Free account for <a href="https://goo.gl/1gzFRE" target="_blank">Microsoft Azure</a>, <a href="https://goo.gl/GQRLct" target="_blank">AWS (Amazon Web Services)</a>, or <a href="https://cloud.google.com" target="_blank">Google Cloud</a> or Vagrant
-
-Okay, to the challenge now...
-
-Pretend that you are a **DevOps Engineer at Stone Co.** and your manager has designated you to help a new development team that will work in a product for the company.
-
-After a few meetings with your new team, you have decided to use **Jenkins as your CI/CD tool**, your team chose to use Node.js with React as the official tech stack.
-
-You are not sure on which cloud service you will use yet(that's why you need a free account of Azure or AWS, it's time to choose!)
-Your team **needs a staging environment** ready to test their first features.
-
-Now that you have a hint of what your team needs, let's move forward.
-
-Once you clone this repo, you will note that we have a `source` folder, inside that folder you will find a  simple react application.
+Once you clone this repo, you will note that we have a `source` folder, inside that folder you will find a simple React application.
 
 What you must know about the app:
 
- 1. `npm install` downloads the dependencies of the project.
- 2. `npm start` runs the application.
- 3. `npm test` runs the application tests.
- 4. `npm test -- --coverage` (yes, with duplicated `--`) runs the coverage and generates a `/coverage` folder with all the data.
- 5. `npm build` will build the application for the production environment.
+1. `npm install` downloads the dependencies of the project.
+1. `npm start` runs the application.
+1. `npm test` runs the application tests.
+1. `npm test -- --coverage` (yes, with duplicated `--`) runs the coverage and generates a `/coverage` folder with all the data.
+1. `npm build` will build the application for the production environment.
+
 
 ### Checkpoints
 
@@ -57,20 +39,27 @@ Here are some of the checkpoints to guide you through this challenge, you **don'
 
 #### Advanced
 
-- [ ] Deploy a SonarQube server to run static code analisys.
+- [ ] Deploy a SonarQube server to run static code analysis.
 - [ ] Report code coverage on SonarQube
-- [ ] Build one of your own opensource application builted in Python, Go, Elixir, C#, Java or Node!
+- [ ] Build one of your own opensource application built in Python, Go, Elixir, C#, Java or Node!
 
-### When you're done...
+## Requirements and Deliverables
 
-Once you have finished, you must send an email to your contact at StoneCo with the following information:
+You will need to complete the challenge:
 
-- [ ] Github repository URL
-- [ ] Jenkins URL with user and password (we might want to take a look in your job).
-- [ ] Published app URL.
-- [ ] In case you did the advanced features, the SonarQube URL.
+- A computer with internet
+- A free account for <a href="https://goo.gl/1gzFRE" target="_blank">Microsoft Azure</a>, <a href="https://goo.gl/GQRLct" target="_blank">AWS (Amazon Web Services)</a>> or Vagrant.
 
-### Useful Tips
+The deliverable for this challenge is code, inside a public GitHub repository of yours. You should provide us the URL for it.
+
+We should be able to build all your infrastructure with few steps, or even with just one command, in our own Azure, AWS or Vagrant environment. Please specify the command to execute and any setup required to ensure a successful run. Also, please specify the URls you would expect us to use for accessing each service:
+
+- The provided React application
+- Jenkins
+- SonarQube (if you choose doing it)
+- Other applications you add (if you choose doing it)
+
+## Useful Keywords
 
 - Ansible
 - Continuous Delivery
@@ -83,6 +72,6 @@ Once you have finished, you must send an email to your contact at StoneCo with t
 - Coveralls
 - Heroku
 
-### Questions?
+## Questions?
 
 If you have any questions, please send an email to your contact at Stone that we will reply as fast as we can :)
