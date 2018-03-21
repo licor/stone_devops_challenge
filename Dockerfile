@@ -1,8 +1,8 @@
 FROM node:alpine
 
-# WORKDIR /home/node/app
+WORKDIR /home/node/app
 
-# COPY source .
+COPY source .
 # EXPOSE 3000
 # # RUN npm install
 
