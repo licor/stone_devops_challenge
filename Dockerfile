@@ -1,9 +1,9 @@
 FROM node:alpine
 
-WORKDIR /home/node/app
+# WORKDIR /home/node/app
 
-COPY source .
-EXPOSE 3000
-# RUN npm install
+# COPY source .
+# EXPOSE 3000
+# # RUN npm install
 
-CMD [ 'npm', 'start' ]
+# CMD [ 'npm', 'start' ]
