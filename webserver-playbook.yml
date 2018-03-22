@@ -4,10 +4,11 @@
 
   tasks:
     - name: stop the current container of webserver
-	  docker:
-	    name: Desafio
-		  state: stop
-		
+      docker:
+        name: Desafio
+        image: "my-image"
+        state: stopped
+
     - name: run the new instance of container webserver
       docker:
         name: Desafio
