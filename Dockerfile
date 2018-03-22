@@ -4,8 +4,7 @@ WORKDIR /home/node/app
 
 COPY source .
 
-USER root
+# USER root
 # EXPOSE 3000
-# # RUN npm install
+RUN npm install
 
-# CMD [ 'npm', 'start' ]
