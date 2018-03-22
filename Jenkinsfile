@@ -1,8 +1,5 @@
 pipeline {
-    agent { dockerfile true }
-    environment {
-        CI = 'true'
-    }
+    agent any 
     stages {
         stage('Checkout') {
             steps {
@@ -10,54 +7,39 @@ pipeline {
             }
         }
     
-        stage('Install') {
+        stage('Installing') {
             steps {
-                sh '''
-                    cd source
-                    npm install
-                '''
-                // sh 'npm run-script build'
+                script {
+                    def myimage = docker.build("my-image:${env.BUILD_ID}")
+                    myimage.inside('-u root') {
+                        sh '''
+                            cd source
+                            npm install
+                        '''
+                    }
+                }
             }
         }
         
-        // stage('start') {
-        //     steps {
-        //         sh '''
-        //             cd source
-        //             npm start
-        //         '''
-        //     }
-        // }
-        
-        stage('Test') {
+
+        stage('Testing') {
             steps {
-                sh '''
-                    cd source
-                    npm test
-                '''
-            }
-        }
-        
-        stage('Coverage') {
-            steps {
-                sh '''
-                    cd source
-                    npm test -- --coverage
-                '''
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                sh '''
-                    cd source
-                    npm run-script build
-                '''
-				docker run -v "$PWD":/home/node/app -p 3000:3000 node:alpine npm start
+                script {
+                    docker.image("my-image:${env.BUILD_ID}").inside('-u root') {
+                        sh '''
+                            cd source
+                            npm test
+                            npm test -- --coverage
+                        '''
+                    }
+                }
             }
         }
     }
     post {
+        success {
+            ansiblePlaybook("./webserver-playbook.yml")
+        }
         always {
             step([
                 $class: 'CloverPublisher',
