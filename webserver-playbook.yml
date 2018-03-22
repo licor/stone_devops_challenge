@@ -1,0 +1,19 @@
+---
+- name: Manage webserver container
+  hosts: localhost
+
+  tasks:
+    - name: stop the current container of webserver
+	  docker:
+	    name: Desafio
+		  state: stop
+		
+    - name: run the new instance of container webserver
+      docker:
+        name: Desafio
+        image: "my-image:{{ lookup('env','BUILD_ID') }}"
+        command: npm start
+        state: reloaded
+        ports:
+        - "3000:3000"
+        # publish_all_ports: yes
