@@ -4,7 +4,7 @@
 
 This project contains the necessary files for a CI/CD example environment.
 
-Tools used for this project:
+Tools used on this project:
 * Jenkins
 * Ansible
 * Docker
